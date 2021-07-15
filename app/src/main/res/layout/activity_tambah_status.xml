@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahStatusActivity">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+    <RelativeLayout
+        android:id="@+id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgView_proPic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/profile"
+             />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgView_proPic"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/viewGetStatus"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLayout">
+
+        <EditText
+            android:id="@+id/et_Status"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Ketik Postinganmu disini.."
+            android:textColorHint="@android:color/darker_gray"
+            android:textStyle="italic"
+            android:gravity="top"
+            android:autofillHints="" />
+
+        <androidx.constraintlayout.widget.Placeholder
+            android:id="@+id/holderGambar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/et_Status"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewGetStatus"
+        android:text="Posting"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_post"
+        />
+
+    <LinearLayout
+        android:id="@+id/viewButton"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnGalery"
+            android:onClick="swapView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_baseline_insert_photo_24"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btnKamera"
+            android:background="@drawable/ic_baseline_camera_alt_24"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:background="@drawable/ic_baseline_insert_drive_file_24"
+            android:id="@+id/btnFile"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
