@@ -11,19 +11,19 @@
         android:id="@+id/btnBack"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnBack"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
         android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
 
     <RelativeLayout
-        android:id="@+id/userLayout"
+        android:id="@id/userLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgView_proPic"
@@ -33,22 +33,20 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/profile"
-             />
-
+            />
+        
         <TextView
-            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imgView_proPic"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
             android:fontFamily="sans-serif-medium"
             android:text="Username"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:textSize="17sp"/>
 
     </RelativeLayout>
-
 
     <RelativeLayout
         android:id="@+id/viewGetStatus"
@@ -65,15 +63,13 @@
             android:hint="Ketik Postinganmu disini.."
             android:textColorHint="@android:color/darker_gray"
             android:textStyle="italic"
-            android:gravity="top"
-            android:autofillHints="" />
+            android:gravity="top"/>
 
         <androidx.constraintlayout.widget.Placeholder
             android:id="@+id/holderGambar"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_below="@+id/et_Status"/>
-
 
     </RelativeLayout>
 
@@ -87,8 +83,7 @@
         android:text="Posting"
         android:textSize="20sp"
         android:textColor="@color/white"
-        android:background="@drawable/shape_post"
-        />
+        android:background="@drawable/shape_post"/>
 
     <LinearLayout
         android:id="@+id/viewButton"
@@ -108,20 +103,20 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:background="@drawable/ic_baseline_insert_photo_24"
-            style="?android:attr/buttonBarButtonStyle" />
+            />
 
         <Button
             android:id="@+id/btnKamera"
-            android:background="@drawable/ic_baseline_camera_alt_24"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_camera_alt_24"
             android:layout_marginRight="20dp"/>
 
         <Button
-            android:background="@drawable/ic_baseline_insert_drive_file_24"
             android:id="@+id/btnFile"
             android:layout_width="70dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_insert_drive_file_24"/>
 
     </LinearLayout>
 
@@ -131,8 +126,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

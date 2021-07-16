@@ -50,35 +50,35 @@ public class TambahStatusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah_status);
 
-    constraintLayout = findViewById(R.id.layoutPost);
-    placeholder = findViewById(R.id.holderGambar);
+        constraintLayout = findViewById(R.id.layoutPost);
+        placeholder = findViewById(R.id.holderGambar);
 
-    textStatus = findViewById(R.id.et_Status);
-    btnBack = findViewById(R.id.btnBack);
-    btnGalery = findViewById(R.id.btnGalery);
-    btnKamera = findViewById(R.id.btnKamera);
-    btnFile = findViewById(R.id.btnFile);
-    btnPosting = findViewById(R.id.btnPost);
+        textStatus = findViewById(R.id.et_Status);
+        btnBack = findViewById(R.id.btnBack);
+        btnGalery = findViewById(R.id.btnGalery);
+        btnKamera = findViewById(R.id.btnKamera);
+        btnFile = findViewById(R.id.btnFile);
+        btnPosting = findViewById(R.id.btnPost);
 
-    progressBar = findViewById(R.id.progressBar);
-    progressBar.setVisibility(View.INVISIBLE);
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
 
-    firebaseFirestore = FirebaseFirestore.getInstance();
-    storageReference = FirebaseStorage.getInstance().getReference();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        storageReference = FirebaseStorage.getInstance().getReference();
 
-    btnGalery.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ambilGambar();
-        }
-    });
+        btnGalery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ambilGambar();
+            }
+        });
 
-    btnPosting.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        btnPosting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        }
-    });
+            }
+        });
 
     }
 
