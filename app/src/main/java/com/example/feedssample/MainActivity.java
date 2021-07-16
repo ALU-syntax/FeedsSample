@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, TambahStatusActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, TambahStatusActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -160,11 +160,14 @@ public class MainActivity extends AppCompatActivity {
     public FeedsHolder(@NonNull View itemView) {
             super(itemView);
             relativeLayout = itemView.findViewById(R.id.feedsLayout);
+
             layoutUser = itemView.findViewById(R.id.userLayout);
             fotoUser = itemView.findViewById(R.id.imgView_proPic);
             userName = itemView.findViewById(R.id.tv_name);
+
             status = itemView.findViewById(R.id.tv_status);
             postGmbr = itemView.findViewById(R.id.imgView_postPic);
+
             layoutButton = itemView.findViewById(R.id.viewBtnPlace);
             btnShare = itemView.findViewById(R.id.btnShare);
             btnComment = itemView.findViewById(R.id.btnComment);

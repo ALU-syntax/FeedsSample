@@ -5,7 +5,8 @@
     android:id="@+id/layoutPost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahStatusActivity">
+    tools:context=".TambahStatusActivity"
+    android:background="@color/white">
 
     <Button
         android:id="@+id/btnBack"
@@ -36,6 +37,7 @@
             />
         
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imgView_proPic"
@@ -51,7 +53,7 @@
     <RelativeLayout
         android:id="@+id/viewGetStatus"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userLayout">
@@ -63,24 +65,27 @@
             android:hint="Ketik Postinganmu disini.."
             android:textColorHint="@android:color/darker_gray"
             android:textStyle="italic"
+            android:textSize="18sp"
+            android:fontFamily="serif-monospace"
             android:gravity="top"/>
 
-        <androidx.constraintlayout.widget.Placeholder
+        <ImageView
             android:id="@+id/holderGambar"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:layout_below="@+id/et_Status"/>
+            android:layout_below="@+id/et_Status" />
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/btnPost"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewGetStatus"
         android:text="Posting"
+        android:gravity="center"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/shape_post"/>
@@ -98,9 +103,8 @@
 
         <Button
             android:id="@+id/btnGalery"
-            android:onClick="swapView"
             android:layout_width="70dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/ic_baseline_insert_photo_24"
             />
@@ -108,14 +112,14 @@
         <Button
             android:id="@+id/btnKamera"
             android:layout_width="70dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/ic_baseline_camera_alt_24"
             android:layout_marginRight="20dp"/>
 
         <Button
             android:id="@+id/btnFile"
             android:layout_width="70dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/ic_baseline_insert_drive_file_24"/>
 
     </LinearLayout>
